@@ -3,8 +3,12 @@ class Shoe
   attr_reader :brand
    BRANDS = []
 
-  def initialize(brand)
+  
+    def initialize(brand)
     @brand = brand
+    if !(BRANDS.include?(@brand))
+      BRANDS << @brand
+    end
   end
 
   def cobble
@@ -13,20 +17,4 @@ class Shoe
   end
   
   
-  def brand=(brand)
-    @brand = brand
-    BRANDS << brand
-    
-  end
-  
-  def brands
-    BRANDS
-  end
-  
-end
-
-brands = ["Uggs", "Rainbow"]
-brands.each do |brand|
-  s = Shoe.new(brand)
-  puts s.brands
 end
