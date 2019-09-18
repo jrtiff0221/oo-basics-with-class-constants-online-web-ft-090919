@@ -19,9 +19,3 @@ class Shoe
   end
   
 end
-
-brands = ["Uggs", "Rainbow"]
-brands.each do |brand|
-  s = Shoe.new(brand)
-  puts s
-end
