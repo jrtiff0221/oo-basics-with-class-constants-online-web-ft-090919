@@ -17,9 +17,8 @@ class Shoe
     @brand = brand
     if !BRANDS.include?(brand)
       BRANDS << brand
-    else
-      BRANDS
     end
+    BRANDS
   end
   
 end
