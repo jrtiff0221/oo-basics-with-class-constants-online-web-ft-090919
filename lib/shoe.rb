@@ -20,12 +20,14 @@ class Shoe
     end
   end
   
-  
+  def brands
+    BRANDS
+  end
   
 end
 
 brands = ["Uggs", "Rainbow"]
 brands.each do |brand|
   s = Shoe.new(brand)
-  puts s
+  puts s.brands
 end
